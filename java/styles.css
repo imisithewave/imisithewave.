@@ -1,0 +1,125 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #f8cdda, #1d2b64);
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.container {
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow for more depth */
+    transition: transform 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px; /* Larger font for the title */
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px; /* Increased padding for better touch targets */
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Softer corners */
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    padding: 12px;
+    margin-left: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px; /* Increased padding */
+    background: #f0f4ff; /* Light blue background */
+    margin-bottom: 10px; /* Slightly more space between items */
+    border-radius: 6px; /* Softer corners */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+li:hover {
+    background: #e1f5fe; /* Light blue on hover */
+}
+
+li button {
+    background: #ff4d4d; /* Red color for delete button */
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 6px 10px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+li button:hover {
+    background: #ff1a1a; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.task-count {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
